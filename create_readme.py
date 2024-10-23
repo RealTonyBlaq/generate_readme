@@ -28,6 +28,6 @@ Explain "{project_name}" in a few sentences.
 5. License Information
 """
 
-response = model.generate_content()
+response = model.generate_content(prompt)
 print(response.text)
 print(response.json)
