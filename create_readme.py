@@ -30,4 +30,3 @@ Explain "{project_name}" in a few sentences.
 
 response = model.generate_content(prompt)
 print(response.text)
-print(response.json)
