@@ -23,7 +23,7 @@ def generate_readme(project_name):
     5. License Information
     """
 
-    res = openai.ChatCompletion.create(
+    res = openai.completions.create(
         model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
