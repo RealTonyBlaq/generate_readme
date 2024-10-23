@@ -6,7 +6,12 @@ import os
 import sys
 
 
-genai.configure(api_key=os.getenv('GEMINI_API_KEY'))
+API_KEY = os.getenv('GEMINI_API_KEY')
+if API_KEY is None:
+    print('No GEMINI_API_KEY environment variable found!')
+    sys.exit(1)
+
+genai.configure(api_key=API_KEY)
 
 
 model = genai.GenerativeModel("gemini-1.5-flash")
